@@ -7,7 +7,6 @@ import java.util.Date;
 
 import javax.crypto.spec.SecretKeySpec;
 import javax.ws.rs.Consumes;
-import javax.ws.rs.FormParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -19,13 +18,12 @@ import javax.ws.rs.core.UriInfo;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.swagger.annotations.Api;
-import io.swagger.util.Json;
+import rest.Filter.Secured;
 import rest.entities.Credentials;
 
-
-
-@Path("authentication")
 @Api
+@Path("authentication")
+
 public class AuthenticationEndPoint {
 	// ======================================
 	// = Injection Points =

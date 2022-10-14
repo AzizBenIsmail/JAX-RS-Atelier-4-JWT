@@ -16,22 +16,30 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import io.swagger.annotations.Api;
+import rest.Filter.Secured;
 import rest.entities.Employe;
 
+@Secured
 @Path("employes")
-@Api
 public class GestionEmploye {
 	
 	public static  List<Employe> employes=new ArrayList<Employe>();
 	
+
 	@POST
 	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.TEXT_PLAIN)
 	public String ajouterEmploye(Employe employe) {
 		 if(employes.add(employe))
 	 return "Add Successful";
 		return "Echec";
-	  
-		
+	}
+
+	@Path("hello")
+	@GET
+	@Produces(MediaType.TEXT_PLAIN)
+	public  String  Sayhello() {
+			return "hello";			
 	}
 	
 	@GET

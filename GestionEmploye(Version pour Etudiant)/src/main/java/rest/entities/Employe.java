@@ -23,14 +23,12 @@ public class Employe {
 		this.prenom = prenom;
 	}
 	
-	@XmlAttribute(name="id",required=true)
 	public int getCin() {
 		return cin;
 	}
 	public void setCin(int cin) {
 		this.cin = cin;
 	}
-	@XmlElement(name="LastName")
 	public String getNom() {
 		return nom;
 	}
@@ -38,7 +36,6 @@ public class Employe {
 		this.nom = nom;
 	}
 	
-	@XmlElement(name="FirstName")
 	public String getPrenom() {
 		return prenom;
 	}

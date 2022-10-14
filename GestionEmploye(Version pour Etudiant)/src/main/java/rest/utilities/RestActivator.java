@@ -7,6 +7,8 @@ import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
 import io.swagger.jaxrs.config.BeanConfig;
+import rest.Filter.AuthenticationFilter;
+import rest.Filter.Secured;
 import rest.ressources.AuthenticationEndPoint;
 import rest.ressources.GestionEmploye;
 
@@ -31,10 +33,11 @@ public class RestActivator extends Application {
 		Set<Class<?>> resources = new HashSet();
 		resources.add(GestionEmploye.class);
 		resources.add(AuthenticationEndPoint.class);
-
+		resources.add(AuthenticationFilter.class);
 
 		resources.add(io.swagger.jaxrs.listing.ApiListingResource.class); 
 		resources.add(io.swagger.jaxrs.listing.SwaggerSerializers.class);
+		
 
 		return resources ;
 	

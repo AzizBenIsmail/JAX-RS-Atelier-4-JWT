@@ -12,10 +12,12 @@ import javax.ws.rs.ext.Provider;
 
 
 import io.jsonwebtoken.Jwts;
+import io.swagger.annotations.Api;
 
 import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.Response;
 
+@Api
 @Secured
 @Provider
 @Priority(Priorities.AUTHENTICATION)

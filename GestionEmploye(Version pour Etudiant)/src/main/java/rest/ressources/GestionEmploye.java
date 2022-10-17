@@ -20,6 +20,7 @@ import rest.Filter.Secured;
 import rest.entities.Employe;
 
 @Secured
+@Api
 @Path("employes")
 public class GestionEmploye {
 	
